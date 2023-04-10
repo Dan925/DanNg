@@ -1,0 +1,366 @@
+---
+import { Image } from '@astrojs/image/components';
+
+const title="Dan Ngendahayo - Resume";
+const description="Hello, my full name is Dan Stéphane Ngendahayo! I’m a 4th yr software engineering student at the University of Ottawa with 4 completed interships. My passion is transforming my creativity and knowledge into a software solution that makes my life easier. As a lifelong learner, my goal is to apply my skills to solving real-world problems one line of code at a time. ";
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+ <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="description" content={description}>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+</head>
+    <header>
+      <h1 class="text-4xl">Dan Stéphane Ngendahayo</h1>
+      <span>
+        <h2 class="text-lg">Software Developer</h2>
+      </span>
+    </header>
+    <div class="main-container">
+      <aside>
+        <section class="contacts">
+          <a class="media" href="mailto:ngedan25@gmail.com"
+            ><Image src="/mail2.svg" alt="mail link" format={"svg"} width={30} height={30} />
+            ngedan25@gmail.com
+          </a>
+          <a
+            class="media"
+            href="https://www.linkedin.com/in/dan-ngendahayo-6956b1193/"
+            ><Image src="/linkedin2.svg" alt="linkedin link" format={"svg"} width={30} height={30}/>
+            dan-ngendahayo
+          </a>
+          <a class="media" href="https://github.com/Dan925"
+            ><Image src="/github2.svg" alt="github link" format={"svg"} width={30} height={30}/>
+            Dan925
+          </a>
+          <span class="media"
+            ><Image src="/phone.svg" alt="phone icon" format={"svg"} width={30} height={30}/>
+            <p>(873)355-4805</p>
+          </span>
+          <span class="media"
+            ><Image src="/location.svg" alt="location icon" format={"svg"} width={30} height={30}/>
+            <p>Ottawa, Canada</p>
+          </span>
+        </section>
+        <section class="skills">
+          <span class="heading">
+            <h2 class="text-2xl">Skills</h2>
+          </span>
+          <div class="sk-container">
+            <span class="sk"><p>React</p> </span>
+            <span class="sk"><p>Django</p> </span>
+            <span class="sk"><p>Angular</p> </span>
+            <span class="sk"><p>Python</p> </span>
+            <span class="sk"><p>JavaScript</p> </span>
+            <span class="sk"><p>NodeJS</p> </span>
+            <span class="sk"><p>Problem solving</p> </span>
+            <span class="sk"><p>Critical Thinking</p> </span>
+          </div>
+        </section>
+        <section class="langs">
+          <span class="heading">
+            <h2 class="text-2xl">Languages</h2>
+          </span>
+          <div class="lang">
+            <p>English</p>
+            <i> Bilingual Proficiency </i>
+          </div>
+          <div class="lang">
+            <p>French</p>
+            <i> Bilingual Proficiency </i>
+          </div>
+        </section>
+        <section class="interests">
+          <span class="heading"
+            ><h2 class="text-2xl"><p>Interests</p></h2></span
+          >
+          <div class="inter-container">
+            <span class="inter"><p>Web Development</p></span>
+            <span class="inter"><p>Data Science</p></span>
+            <span class="inter"><p>Video Games</p></span>
+          </div>
+        </section>
+      </aside>
+
+      <main>
+        <section class="education">
+          <span class="heading">
+            <h2 class="text-2xl">Education</h2>
+          </span>
+          <div class="section-content">
+            <h3>BASc in Software Engineering</h3>
+            <h4>University of Ottawa</h4>
+            <span class="time">
+              <p>09/2019-Present</p>
+              <p>Ottawa, Ontario</p>
+            </span>
+          </div>
+        </section>
+
+        <section class="work">
+          <span class="heading">
+            <h2 class="text-2xl">Work Experience</h2>
+          </span>
+          <div class="section-content">
+            <h3>Full Stack Developer</h3>
+            <h4>Signiant Inc.</h4>
+            <span class="time">
+              <p>05/2022-08/2022</p>
+              <p>Ottawa, Ontario</p>
+            </span>
+            <div class="work-details">
+              <ul>
+                <li>
+                  Used various <b>AWS cloud services</b> to build scalable
+                  back-end services with focus on micro-service architecture
+                  with <b>NodeJS</b>.
+                </li>
+                <li>
+                  Improved design thinking skills by actively participating in
+                  high level design discussions in order to provide insightful
+                  ideas and lanes of thoughts for solving problems with
+                  software.
+                </li>
+                <li>
+                  Contributed to an agile development process from sprint
+                  planning to retrospective by communicating road blocks and
+                  collaborating with other developers to achieve current sprint
+                  goals on a biweekly sprint schedule.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-content">
+            <h3>Software Developer</h3>
+            <h4>Giatec Scientific Inc.</h4>
+            <span class="time">
+              <p>09/2021-12/2021</p>
+              <p>Ottawa, Ontario</p>
+            </span>
+            <div class="work-details">
+              <ul>
+                <li>
+                  Worked closely with other developers, the Product Owner and UX
+                  to improve product usability by developing new features to
+                  their microservice architecture web application using mainly
+                  <b>Django</b> and <b>Angular</b>.
+                </li>
+                <li>
+                  Maintained customer satisfaction by reproducing and resolving
+                  bugs in a timely manner.
+                </li>
+                <li>
+                  Participated in Agile development process through <b>SCRUM</b>
+                  activities such as sprint planning, stand-ups and
+                  retrospective meetings
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="section-content">
+            <h3>Information Technoly Analyst</h3>
+            <h4>National Research Council of Canada</h4>
+            <span class="time">
+              <p>05/2020-08/2020 & 01/2021-04/2021</p>
+              <p>Ottawa, Ontario</p>
+            </span>
+            <div class="work-details">
+              <ul>
+                <li>
+                  Expanded on my knowledge of automation applications by working
+                  with <b>MS Power Apps</b> and Power Virtual Agent.
+                </li>
+                <li>
+                  Developed a comprehensive project plan to implement a
+                  Microsoft Bot Framework based Chatbot in a timely matter
+                </li>
+                <li>
+                  Documented project functionalities, gathered constraints and
+                  requirements for maintenance and quality assurance purposes.
+                </li>
+                <li>
+                  Developed complementary features with a server scripting
+                  language in <b>PHP</b> for an IT request management web
+                  application.
+                </li>
+                <li>
+                  Implemented new database management reports using
+                  <b>ORACLE DB</b>
+                  queries and a Microsoft task automation language called
+                  <b>PowerShell</b>.
+                </li>
+                <li>
+                  Facilitated the adoption and use of MS Teams across
+                  NRC-Construction by providing a documentation for FAQ in the
+                  form of a Wiki in MS Teams.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --accent: #34678c;
+  --accent-lg: #99b3c5;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "sans-serif";
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style-type: square;
+}
+header {
+  width: 99%;
+  margin: 1em 0 2em 1em;
+  height: 20%;
+  background-color: var(--accent);
+  color: white;
+  float: right;
+  padding: 1em;
+}
+header span {
+  display: block;
+  width: 15em;
+  height: 1.5em;
+  border-bottom: 1px solid white;
+  margin-bottom: 0.4em;
+}
+
+.main-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+aside {
+  width: 20%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+main {
+  width: 70%;
+  height: 100%;
+}
+.contacts {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.media {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+.skills {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.langs {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+}
+.interests {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  display: block;
+  width: 100%;
+  height: 2em;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 0.4em;
+}
+.heading h2,
+.section-content h3 {
+  color: var(--accent);
+}
+.section-content {
+  margin: 1em 0;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent-lg);
+  margin-bottom: 0.5em;
+}
+.education {
+  width: 100%;
+  height: 20%;
+}
+
+.work {
+  width: 100%;
+  height: 100%;
+}
+
+.sk-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  gap: 0.2em;
+  flex-wrap: wrap;
+}
+.sk {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5em;
+  background-color: var(--accent-lg);
+  color: white;
+  border-radius: 10px;
+}
+
+i {
+  color: var(--accent);
+}
+.lang {
+  margin: 1em 0;
+}
+.inter-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+.inter {
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5em;
+  border: 1px solid black;
+
+  border-radius: 5px;
+}
+
+</style>
