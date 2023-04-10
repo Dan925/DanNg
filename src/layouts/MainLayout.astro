@@ -4,13 +4,15 @@ import Footer from "../components/Footer.astro"
 
 interface Props {
     title?:string;
+    description?:string;
 }
-const {title="Dan Ngendahayo"} = Astro.props as Props
+const {title="Dan Ngendahayo", description="Dan Ngendahayo Portfolio Website"} = Astro.props as Props
 ---
 <html>
 <head>
     <meta charset="UTF-8" />
  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="description" content={description}>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
