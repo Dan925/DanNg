@@ -1,6 +1,9 @@
+---
+import { Image } from '@astrojs/image/components';
+---
     <header class="sticky top-0 bg-bgrd-b flex p-[2rem] justify-between align-center z-30">
         <a class="flex items-center gap-[0.2rem] h-fit ml-[2rem] text-white" href="#hero">
-            <img src="/logo.svg" alt="Website logo" />
+            <Image src="/logo.svg" alt="Website logo" width={30} height={30} format={"svg"}/>
             <h2 class="text-2xl">Dan N.</h2>
         </a>
 
