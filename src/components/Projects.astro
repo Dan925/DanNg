@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectPreview from './ProjectPreview.astro'
+const projectEntries = await getCollection('project');
+
+---
+    <!--Projects section-->
+    <section id="projects" class="flex w-full h-[40rem] flex-wrap flex-col overflow-y-auto relative items-center">
+        <div class="flex w-3/4 items-center gap-4 py-[3rem] h-1/5 flex-wrap bg-bgrd">
+            <h1>Projects</h1>
+            <div class="border-t-2 border-accent w-[32rem]"></div>
+            <a class="mx-auto hover:underline" href="https://github.com/Dan925"><span> See More &rarr; </span></a>
+        </div>
+        <div class="flex w-full h-[80%] items-baseline flex-wrap gap-8 justify-center py-4">
+        { projectEntries.map(({data})=><ProjectPreview title={data.title} description={data.description} tags={data.tags} thumbnail={data.thumbnail} sourceCode={data.sourceCode}/>)
+
+        }       
+
+        </div>
+    </section>
