@@ -20,9 +20,9 @@ import { Image } from '@astrojs/image/components';
         </div>
         <div class="basis-1/2 h-full flex flex-col items-center">
             <div class="relative w-[34rem] h-[32rem]">
-                <Image class="w-[29rem] z-0 absolute top-0 left-4 opacity-30" src="/prof.svg" alt="Hero Image" width={464} height={490} aspectRatio={"1:1"} />;
-                <Image class="absolute bottom-14 right-2 z-10" src="/lines.svg" alt="prof-lines" width={100} height={100}/>
-                <Image class="absolute top-2 left-0 z-10" src="/dots.svg" alt="prof-dots" width={100} height={100}/>
+                <Image class="w-[29rem] z-0 absolute top-0 left-4 opacity-30" src="/prof.svg" alt="Hero Image" width={464} height={490} format={"svg"} />
+                <Image class="absolute bottom-14 right-2 z-10" src="/lines.svg" alt="prof-lines" width={100} height={100} format={"png"}/>
+                <Image class="absolute top-2 left-0 z-10" src="/dots.svg" alt="prof-dots" width={100} height={100} format={"svg"}/>
             </div>
             <div class="flex items-center gap-[2rem] z-0">
                 <div class="bg-accent w-[15px] h-[15px]"></div>
