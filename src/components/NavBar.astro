@@ -1,17 +1,68 @@
 ---
 import { Image } from '@astrojs/image/components';
 ---
-    <header class="sticky top-0 bg-bgrd-b flex p-[2rem] justify-between align-center z-30">
-        <a class="flex items-center gap-[0.2rem] h-fit ml-[2rem] text-white" href="#hero">
+    <header class="sticky top-0 bg-bgrd-b flex p-[2rem] justify-between align-center z-30 w-full">
+        <a id="logo" class="flex items-center gap-[0.2rem] h-fit ml-[2rem] text-white" href="#hero">
             <Image src="/logo.svg" alt="Website logo" width={30} height={30} format={"svg"}/>
             <h2 class="text-2xl">Dan N.</h2>
         </a>
 
-        <ul class="flex gap-5 mr-[3rem]">
+        <ul class="hidden md:flex gap-5 mr-[3rem]">
             <li><a href="#about">About Me</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contacts">Contacts</a></li>
         </ul>
+<button
+            id="hamburger-button"
+            class="relative h-8 w-8 cursor-pointer text-3xl md:hidden"
+          >
+            <div
+              class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']"
+            ></div>
+          </button>
+          <div id="mobile-menu" class="hidden absolute top-[6rem] left-0 bg-bgrd-b flex-col items-center py-20 text-3xl text-white gap-8 w-full h-[100vh] md:hidden">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+
+          </div>
     </header>
+    <script>
+        const hamburgerBtn = document.querySelector("#hamburger-button");
+        const mobileMenu = document.querySelector("#mobile-menu");
+        const mobileMenuItems = document.querySelectorAll("#mobile-menu  a,#logo");
+        const toggleMobileMenu = ()=>{
+               mobileMenu.classList.toggle('hidden');
+               mobileMenu.classList.toggle('flex');
+               hamburgerBtn.classList.toggle('toggle-btn');
+        }
+        hamburgerBtn.addEventListener('click',toggleMobileMenu);
+        mobileMenuItems.forEach(item=>item.addEventListener('click',toggleMobileMenu));
+
+
+
+    </script>
+    <style>
+.toggle-btn>div::before {
+  --tw-translate-y: 0px;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toggle-btn>div::after {
+  --tw-translate-y: 0px;
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.toggle-btn>div {
+  --tw-rotate: 720deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  background-color: transparent;
+}
+
+
+    </style>
 
