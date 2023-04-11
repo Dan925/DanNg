@@ -1,22 +1,23 @@
 {
-  "name": "danng",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@astrojs/image": "^0.16.5",
-    "@astrojs/tailwind": "^3.1.1",
-    "astro": "^2.2.1",
-    "sharp": "^0.31.1",
-    "tailwindcss": "^3.3.1"
-  }
+    "name": "danng",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@astrojs/image": "^0.16.5",
+        "@astrojs/sitemap": "^1.2.2",
+        "@astrojs/tailwind": "^3.1.1",
+        "astro": "^2.2.1",
+        "sharp": "^0.31.1",
+        "tailwindcss": "^3.3.1"
+    }
 }
