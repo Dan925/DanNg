@@ -1,85 +1,83 @@
 ---
-import NavBar from "../components/NavBar.astro"
-import Footer from "../components/Footer.astro"
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-    title?:string;
-    description?:string;
+    title?: string;
+    description?: string;
 }
-const {title="Dan Ngendahayo", description="Hello, my full name is Dan Stéphane Ngendahayo! I’m a 4th yr software engineering student at the University of Ottawa with 4 completed interships. My passion is transforming my creativity and knowledge into a software solution that makes my life easier. As a lifelong learner, my goal is to apply my skills to solving real-world problems one line of code at a time. "} = Astro.props as Props
+const {
+    title = "Dan Ngendahayo",
+    description = "Hello, my full name is Dan Stéphane Ngendahayo! I’m a 4th yr software engineering student at the University of Ottawa with 4 completed interships. My passion is transforming my creativity and knowledge into a software solution that makes my life easier. As a lifelong learner, my goal is to apply my skills to solving real-world problems one line of code at a time. ",
+} = Astro.props as Props;
 ---
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-  <link rel="sitemap" href="/sitemap-index.xml">
- <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<meta name="description" content={description}>
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-</head>
-  <body>
-  <NavBar/>
-    <slot/>
-  <Footer/>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <NavBar />
+        <slot />
+        <Footer />
+    </body>
 </html>
 <style is:global>
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
-:root {
-  --accent: #ed3434;
-  --bgrd: #282c33;
-  --bgrd-b: #16181c;
-  --gray: #abb2bf;
-  --font-fira: "Fira Code"
-}
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 10em;
-}
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Fira Code", "monospace";
-}
-li {
-  list-style-type: none;
-}
-a {
-  text-decoration: none;
-  color: var(--gray);
-}
+    @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
+    :root {
+        --accent: #ed3434;
+        --bgrd: #282c33;
+        --bgrd-b: #16181c;
+        --gray: #abb2bf;
+        --font-fira: "Fira Code";
+    }
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 10em;
+    }
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: "Fira Code", "monospace";
+    }
+    li {
+        list-style-type: none;
+    }
+    a {
+        text-decoration: none;
+        color: var(--gray);
+    }
 
-a:hover,
-a:active {
-  color: white;
-  cursor: pointer;
-}
-h1 {
-  margin-bottom: 0.3em;
-  font-size: 2.5em;
-}
+    a:hover,
+    a:active {
+        color: white;
+        cursor: pointer;
+    }
+    h1 {
+        margin-bottom: 0.3em;
+        font-size: 2.5em;
+    }
 
-li a::before,
-h1::before,
-h5::before {
-  content: "#";
-  color: var(--accent);
-}
-body {
-    width: 100vw;
-  background-color: var(--bgrd);
-  color: white;
-  position:relative;
-}
+    li a::before,
+    h1::before,
+    h5::before {
+        content: "#";
+        color: var(--accent);
+    }
+    body {
+        width: 100vw;
+        background-color: var(--bgrd);
+        color: white;
+        position: relative;
+    }
 
-img {
-object-fit: none;
-}
+    img {
+        object-fit: none;
+    }
 </style>
-
-
-
-
-
-
